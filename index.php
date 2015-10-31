@@ -15,10 +15,18 @@
     $results = mysqli_query($connection, $query);
     $arr_result =  mysqli_fetch_array($results,MYSQLI_BOTH); 
     if(!$results) {
-      die("could not query".mysql_error());
+      die("could not query ".mysqli_error());
     }
 
-    var_dump($arr_result);
+    foreach($arr_result as $row) {
+      echo "<tr>";
+      echo "<td>".$row["id"]."</td>";
+      echo "<td>".$row["name"]."</td>";
+      echo "<td>".$row["rating"]."</td>";
+      echo "<td>".$row["thoughts"]."</td>";
+      echo "</tr>";
+    }
+    mysqli_close($connection);
   ?>
 </table>
 </body>
