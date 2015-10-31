@@ -13,8 +13,11 @@
 
     $connection = mysql_connect("localhost", "projectg", "dumbledorespants2", "projectg");
     $results = mysql_query($connection, $query);
-    echo mysql_error($connection);
-    var_dump($results);
+    if(!$results) {
+      die("could not query".mysql_error());
+    }
+
+    echo mysql_result($results);
   ?>
 </table>
 </body>
