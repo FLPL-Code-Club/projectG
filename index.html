@@ -9,12 +9,12 @@
 <h1>Project G</h1>
 <table id="game-list">
   <?php 
-    $creds = {
+    $creds = [
       "host" => "localhost",
       "user" => "projectg"
       "password" => "dumbledorespants2"
       "db" => "projectg"
-    };
+    ];
     $query = "select * from 'projectg'.'games';";
 
     $connection = mysqli_connect($creds["host"], $cred["user"], $creds["password"], $creds["db"]);
