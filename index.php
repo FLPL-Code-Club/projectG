@@ -14,7 +14,7 @@
     $connection = mysql_connect("localhost", "projectg", "dumbledorespants2", "projectg");
     $results = mysql_query($connection, $query);
     echo mysql_error($connection);
-    var_dump $results;
+    var_dump($results);
   ?>
 </table>
 </body>
