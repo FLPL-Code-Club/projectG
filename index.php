@@ -11,13 +11,14 @@
   <?php 
     $query = "select * from projectg.games;";
 
-    $connection = mysql_connect("localhost", "projectg", "dumbledorespants2", "projectg");
-    $results = mysql_query($connection, $query);
+    $connection = mysqli_connect("localhost", "projectg", "dumbledorespants2", "projectg");
+    $results = mysqli_query($connection, $query);
+    $arr_result =  mysqli_fetch_array($results,MYSQLI_BOTH); 
     if(!$results) {
       die("could not query".mysql_error());
     }
 
-    echo mysql_result($results);
+    var_dump($arr_result);
   ?>
 </table>
 </body>
