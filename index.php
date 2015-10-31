@@ -9,7 +9,7 @@
 <h1>Project G</h1>
 <table id="game-list">
   <?php 
-    $query = "select * from projectg. games;";
+    $query = "select * from projectg.games;";
 
     $connection = mysql_connect("localhost", "projectg", "dumbledorespants2", "projectg");
     $results = mysql_query($connection, $query);
