@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project G</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script type="text/javascript" src="js/gamez.js"></script>
+</head>
+<body>
+<h1>Project G</h1>
+<table id="game-list">
+  <?php 
+    $creds = {
+      "host" => "localhost",
+      "user" => "projectg"
+      "password" => "dumbledorespants2"
+      "db" => "projectg"
+    };
+    $query = "select * from 'projectg'.'games';";
+
+    $connection = mysqli_connect($creds["host"], $cred["user"], $creds["password"], $creds["db"]);
+    $results = mysqli_query($connection, $query);
+    var_dump $results;
+  ?>
+</table>
+</body>
+</html>
