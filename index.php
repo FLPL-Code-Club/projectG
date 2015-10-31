@@ -11,9 +11,9 @@
   <?php 
     $query = "select * from 'projectg'.'games';";
 
-    $connection = mysqli_connect("localhost", "projectg", "dumbledorespants2", "projectg");
-    $results = mysqli_query($connection, $query);
-    echo mysqli_error($connection);
+    $connection = mysql_connect("localhost", "projectg", "dumbledorespants2", "projectg");
+    $results = mysql_query($connection, $query);
+    echo mysql_error($connection);
     var_dump $results;
   ?>
 </table>
