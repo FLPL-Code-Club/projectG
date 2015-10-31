@@ -13,12 +13,11 @@
 
     $connection = mysqli_connect("localhost", "projectg", "dumbledorespants2", "projectg");
     $results = mysqli_query($connection, $query);
-    $arr_result =  mysqli_fetch_array($results,MYSQLI_BOTH); 
     if(!$results) {
       die("could not query ".mysqli_error());
     }
 
-    foreach($arr_result as $row) {
+    while($row = mysqli_fetch_array($results,MYSQLI_BOTH)){
       echo "<tr>";
       echo "<td>".$row["id"]."</td>";
       echo "<td>".$row["name"]."</td>";
