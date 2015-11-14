@@ -14,7 +14,7 @@
     $connection = mysqli_connect("localhost", "projectg", "dumbledorespants2", "projectg");
     $results = mysqli_query($connection, $query);
     if(!$results) {
-      die("could not query ".mysqli_error());
+      echo("could not query ".mysqli_error());
     }
 
     while($row = mysqli_fetch_array($results,MYSQLI_BOTH)){
@@ -28,5 +28,15 @@
     mysqli_close($connection);
   ?>
 </table>
+
+<form action="gamez.php" method="post">
+  <label for="name">NAME:</label>
+  <input type="text" name="name" placeholder="Undertale">
+  <label for="rating">RATING:</label>
+  <input type="number" name="rating" placeholder="1.0" max="5.0">
+  <label for="thoughts">THOUGHTS:</label>
+  <input type="text" name="thoughts" placeholder="It was pretty good...">
+  <input type="submit">
+</form>
 </body>
 </html>
