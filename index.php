@@ -9,12 +9,25 @@
 <h1>Project G</h1>
 <table id="game-list">
   <?php 
+    $connection = mysqli_connect("localhost", "projectg", "dumbledorespants2", "projectg");
+
+    $query = 'select column_name from INFORMATION_SCHEMA.columns where table_name="games" and table_schema="projectg"';
+    $headers = mysqli_query($connection, $query);
+    if(!$headers){
+      die("could not query, ya big dummy ".mysqli_error);
+    }
+
+    echo "<tr>";
+    while($header = mysql_fetch_array($headers, MYSQLI_NUM)){  
+      echo "<th>".$header[0]."</th>";
+    }
+    echo "</tr>";
+
     $query = "select * from projectg.games;";
 
-    $connection = mysqli_connect("localhost", "projectg", "dumbledorespants2", "projectg");
     $results = mysqli_query($connection, $query);
     if(!$results) {
-      echo("could not query ".mysqli_error());
+      echo("could not query, ya estupido grande ".mysqli_error());
     }
 
     while($row = mysqli_fetch_array($results,MYSQLI_BOTH)){
