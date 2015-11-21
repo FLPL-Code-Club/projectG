@@ -14,7 +14,7 @@
     $query = 'select column_name from INFORMATION_SCHEMA.columns where table_name="games" and table_schema="projectg"';
     $headers = mysqli_query($connection, $query);
     if(!$headers){
-      die("could not query, ya big dummy ".mysqli_error);
+      die("could not query, ya big dummy ".mysqli_error());
     }
 
     echo "<tr>";
