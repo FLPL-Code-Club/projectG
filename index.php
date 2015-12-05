@@ -50,7 +50,7 @@
   <label for="name">NAME:</label>
   <input type="text" name="name" placeholder="Game">
   <label for="rating">RATING:</label>
-  <input type="number" name="rating" placeholder="1.0" max="5.0">
+  <input type="number" step="any" name="rating" placeholder="1.0" max="5.0">
   <label for="thoughts">THOUGHTS:</label>
   <input type="text" name="thoughts" placeholder="It was pretty good...">
   <input type="submit">
