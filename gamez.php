@@ -5,7 +5,7 @@
  $result = mysqli_query($connection, $query);
 
  if(!$result){
- 	die("could not query, ya strange weirdo ".mysqli_error());
+ 	die("could not query, ya dumb biggie ".mysqli_error());
  }
  header('Location: index.php');
  ?>

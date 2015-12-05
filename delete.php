@@ -1,5 +1,5 @@
 <?php 
- $query = "DELETE FROM projectg,games WHERE id = ".$_POST['id'];
+ $query = "DELETE FROM projectg.games WHERE id = ".$_POST['id'];
 
  $connection = mysqli_connect("localhost", "projectg", "dumbledorespants2", "projectg");
  $result = mysqli_query($connection, $query);

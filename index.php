@@ -48,7 +48,7 @@
 
 <form action="gamez.php" method="post">
   <label for="name">NAME:</label>
-  <input type="text" name="name" placeholder="Undertale">
+  <input type="text" name="name" placeholder="Game">
   <label for="rating">RATING:</label>
   <input type="number" name="rating" placeholder="1.0" max="5.0">
   <label for="thoughts">THOUGHTS:</label>
