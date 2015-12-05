@@ -36,6 +36,10 @@
       echo "<td>".$row["name"]."</td>";
       echo "<td>".$row["rating"]."</td>";
       echo "<td>".$row["thoughts"]."</td>";
+      echo "<form action ='delete.php' method='post'>";
+       echo "<input type='hidden' name='id' value='".$row[id]."'/>";
+       echo "<td><input type='submit' name='delete' value= 'delete'/></td>";
+      echo "</form>"; 
       echo "</tr>";
     }
     mysqli_close($connection);
